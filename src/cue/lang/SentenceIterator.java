@@ -24,9 +24,9 @@ import java.util.regex.Pattern;
  * Construct with a {@link String}; retrieve a sequence of {@link String}s, each of
  * which is a "sentence" according to Java's built-in model for the given
  * {@link Locale}.
- * 
+ *
  * @author Jonathan Feinberg <jdf@us.ibm.com>
- * 
+ *
  */
 public class SentenceIterator extends IterableText
 {
@@ -52,7 +52,7 @@ public class SentenceIterator extends IterableText
 		advance();
 	}
 
-	private static final Pattern ABBREVS = Pattern.compile("(?:Mrs?|Ms|Dr|Rev)\\.\\s*$");
+	private static final Pattern ABBREVS = Pattern.compile("(?:Mrs?|Ms|Dr|Rev|e.g|i.e)\\.\\s*$");
 
 	private void advance()
 	{
